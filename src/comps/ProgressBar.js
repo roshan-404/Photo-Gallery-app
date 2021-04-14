@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import useStorage from '../hooks/useStorage';
 import {motion} from 'framer-motion';
 
@@ -10,8 +10,10 @@ const ProgressBar = ({file , setFile}) => {
 
     useEffect(() => {
         if (url) {
+            
             setFile(null)
         }
+        // eslint-disable-next-line
     }, [url])
     
 
