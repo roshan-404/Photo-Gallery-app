@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
 
+
 :root{
   --primary: #EF4444;
   --secondary: #4e4e4e;
@@ -10,7 +11,7 @@
 /* base styles & title */
 body{
   font-family: "Noto Serif";
-  /* font-family: 'Dancing Script', cursive; */
+  /* font-family: 'Dancing Script', cursive; */ 
   color: var(--secondary);
 }
 .App{
@@ -45,7 +46,7 @@ label input{
   width: 0;
   opacity: 0;
 }
-label{
+.upload-btn{
   display: block;
   width: 30px;
   height: 30px;
@@ -56,11 +57,11 @@ label{
   color: var(--primary);
   font-weight: bold;
   font-size: 24px;
-}
-label:hover{
+} 
+.upload-btn:hover{
   background: var(--primary);
   color: white;
-}
+} 
 .output{
   height: 60px;
   font-size: 0.8rem;

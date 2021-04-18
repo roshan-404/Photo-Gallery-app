@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import 'firebase/firestore';
+import 'firebase/auth';
 
  // Your web app's Firebase configuration
  var firebaseConfig = {
@@ -12,10 +13,12 @@ import 'firebase/firestore';
     appId: "1:219106097222:web:aa0fdef03e46c5b6837247"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebaseConfig);
 
   const projectStorage= firebase.storage();
   const projectFirestore = firebase.firestore();
   const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+  const auth = app.auth();
 
-  export { projectStorage, projectFirestore, timestamp};
+  export { projectStorage, projectFirestore, timestamp, auth};
+  export default app; 
