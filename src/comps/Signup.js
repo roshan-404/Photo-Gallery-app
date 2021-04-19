@@ -2,6 +2,8 @@ import React, { useRef, useState} from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext'
 import {Link,useHistory } from 'react-router-dom'
+// import Title from './Title';
+// import Navbar from './Navbar';
 
 export default function Signup() {
 
@@ -24,7 +26,7 @@ export default function Signup() {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            useHistory.push("/login")
+            history.push("/")
         }catch {
             setError('failed to create an account')
         }
@@ -35,6 +37,7 @@ export default function Signup() {
         <>
             <Card>
                 <Card.Body>
+                    
                     <h2 className="text-center mb-4">Sign Up</h2>
                     {error && <Alert variant="danger" >{error}</Alert>  }
                     <Form onSubmit={handleSubmit}>

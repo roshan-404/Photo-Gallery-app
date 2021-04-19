@@ -3,8 +3,8 @@
 
 
 :root{
-  --primary: #EF4444;
-  --secondary: #4e4e4e;
+  --prim: #EF4444;
+  --second: #4e4e4e;
   --error: #ff4a4a;
 }
 
@@ -12,7 +12,7 @@
 body{
   font-family: "Noto Serif";
   /* font-family: 'Dancing Script', cursive; */ 
-  color: var(--secondary);
+  color: var(--second);
 }
 .App{
   max-width: 960px;
@@ -20,8 +20,10 @@ body{
 }
 .title h1{
   font-family: "Noto Serif";
-  color: var(--primary);
-  font-size: 1.2rem;
+  color: var(--prim);
+  font-size: 1.6rem;
+  font-weight: bold;
+  /* margin-top: ; */
   letter-spacing: 2px;
   font-weight: normal;
 }
@@ -31,9 +33,50 @@ body{
 }
 .title h2{
   font-family: 'Dancing Script', cursive;
-  color: var(--primary);
-  margin-top: 60px;
-  font-size: 2.6rem;
+  color: var(--prim);
+  margin-top: 45px;
+  
+  font-size: 3.5rem;
+}
+
+.navigation {
+  /* position: fixed; 
+  top: 0; */
+  max-width: 150%;
+
+  /* background-color: var(--prim); */
+  color: var(--prim);
+  padding: 0rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.navigation .nav-brand {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navigation .nav-pills {
+  text-align: right;
+
+}
+
+.navigation .link {
+   /* color: var(--prim);  */
+   color: white;
+
+}
+
+.navigation .link-active {
+  font-weight: bold;
+}
+
+.list-non-bullet {
+  list-style: none;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
 }
 
 /* upload form styles */
@@ -50,16 +93,16 @@ label input{
   display: block;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--prim);
   border-radius: 50%;
   margin: 10px auto;
   line-height: 30px;
-  color: var(--primary);
+  color: var(--prim);
   font-weight: bold;
   font-size: 24px;
 } 
 .upload-btn:hover{
-  background: var(--primary);
+  background: var(--prim);
   color: white;
 } 
 .output{
@@ -73,7 +116,7 @@ label input{
 /* progress bar styles */
 .progress-bar{
   height: 5px;
-  background: var(--primary);
+  background: var(--prim);
   margin-top: 20px;
 }
 
